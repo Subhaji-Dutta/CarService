@@ -9,9 +9,10 @@ import Team from './Pages/Team';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
+   <Navbar />
       <Home />
+    <Router>
+      
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path= '/about' element={<About />}/>
