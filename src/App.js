@@ -1,4 +1,4 @@
-import {HashRouter as Router,Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router,Routes, Route } from "react-router-dom";
 import "../src/dist/styles.css";
 import Navbar from "./components/Navbar";
 import Home from './Pages/Home';
@@ -9,10 +9,8 @@ import Team from './Pages/Team';
 
 function App() {
   return (
-    <Router>
-      <div>
+    <Router basename="/CarService">
       <Navbar />
-      <Home />
       <Routes>
         <Route index path='/' element={<Home />} />
         <Route exact path= '/about' element={<About />}/>
@@ -20,7 +18,6 @@ function App() {
         <Route exact path= '/team' element={<Team />}/> 
         <Route exact path= '/contact' element={<Contact />}/>
       </Routes>
-      </div>
     </Router>
   );
 }
